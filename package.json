@@ -8,10 +8,10 @@
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dorelljames/linear-inline-issues.git"
+    "url": "https://github.com/dorelljames/vscode-linear-issue-preview.git"
   },
   "bugs": {
-    "url": "https://github.com/dorelljames/linear-inline-issues/issues"
+    "url": "https://github.com/dorelljames/vscode-linear-issue-preview/issues"
   },
   "galleryBanner": {
     "color": "#3F4699",
