@@ -4,8 +4,26 @@
   "description": "See Linear issue details inline: hover any issue key like DEV-4513 for status, assignee and description without leaving VS Code.",
   "version": "0.1.2",
   "publisher": "dorelljames",
-  "private": true,
   "license": "MIT",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dorelljames/linear-inline-issues.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dorelljames/linear-inline-issues/issues"
+  },
+  "galleryBanner": {
+    "color": "#3F4699",
+    "theme": "dark"
+  },
+  "keywords": [
+    "linear",
+    "issues",
+    "issue tracker",
+    "hover",
+    "productivity"
+  ],
   "engines": {
     "vscode": "^1.85.0"
   },
