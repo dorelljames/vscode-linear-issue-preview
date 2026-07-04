@@ -1,0 +1,95 @@
+{
+  "name": "linear-inline-issues",
+  "displayName": "Linear Inline Issues",
+  "description": "See Linear issue details inline: hover any issue key like DEV-4513 for status, assignee and description without leaving VS Code.",
+  "version": "0.1.2",
+  "publisher": "dorelljames",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "linearIssues.setApiKey",
+        "title": "Linear Issues: Set API Key"
+      },
+      {
+        "command": "linearIssues.clearApiKey",
+        "title": "Linear Issues: Clear API Key"
+      },
+      {
+        "command": "linearIssues.refresh",
+        "title": "Linear Issues: Refresh (clear cache)"
+      },
+      {
+        "command": "linearIssues.showDetails",
+        "title": "Linear Issues: Open Issue Details"
+      },
+      {
+        "command": "linearIssues.copyBranchName",
+        "title": "Linear Issues: Copy Branch Name"
+      }
+    ],
+    "configuration": {
+      "title": "Linear Inline Issues",
+      "properties": {
+        "linearIssues.inlineStatus": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the issue status inline next to issue keys (e.g. DEV-4513 ● In Progress)."
+        },
+        "linearIssues.teamKeys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "markdownDescription": "Team key prefixes to recognize (e.g. `DEV`, `OPS`). Leave empty to auto-detect from your Linear workspace."
+        },
+        "linearIssues.cacheTtlSeconds": {
+          "type": "number",
+          "default": 300,
+          "description": "How long to cache issue data before re-fetching from Linear."
+        },
+        "linearIssues.hoverDescriptionLength": {
+          "type": "number",
+          "default": 600,
+          "description": "Maximum number of description characters shown in the hover card."
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "linearIssues.copyBranchName",
+          "when": "false"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "package": "vsce package --no-dependencies"
+  },
+  "dependencies": {
+    "marked": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.0.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.5.0"
+  }
+}
