@@ -2,6 +2,10 @@
 
 See Linear issue details inline in VS Code. Reference an issue key like `DEV-4513` anywhere — code comments, commit messages, markdown — and get its details without opening Linear.
 
+<img width="1444" height="902" alt="CleanShot 2026-07-04 at 13 29 07@2x" src="https://github.com/user-attachments/assets/855800bb-a645-4189-a12c-49e1f3860972" />
+<img width="924" height="774" alt="CleanShot 2026-07-04 at 13 30 11@2x" src="https://github.com/user-attachments/assets/aa66751a-c3f4-41fb-af0c-fe6124741a7c" />
+
+
 ## Features
 
 - **Hover card** — hover any issue key to see status, title, assignee, priority, labels and a description preview, with quick actions (Open in Linear, Details, Copy branch name).
